@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,15 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.button2)
         rollButton.setOnClickListener {
-            /*
             val toast = Toast.makeText(this, "Let's go!", Toast.LENGTH_SHORT)
             toast.show()
-            */
             rollDice()
-            /*
-            val resultTextView: TextView= findViewById(R.id.textView3)
-            resultTextView.text="6"
-            */
+
         }
     }
 
@@ -28,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         val dice = Dice(6)
         val rolls = dice.roll()
 
-        //val resultTextView: TextView = findViewById(R.id.textView3)
+        val resultTextView: TextView = findViewById(R.id.textView3)
+        resultTextView.setText(rolls.toString())
         val diceImage: ImageView = findViewById(R.id.imageView2)
         when (rolls){
             3-> diceImage.setImageResource(R.drawable.dice_3)

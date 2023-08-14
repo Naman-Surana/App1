@@ -2,8 +2,9 @@
     <string name="app_name">Dice Roller</string>
     <string name="message">Happy birthday</string>
     <string name="happy_bday">dice</string>
-    <string name="sender_text">your one</string>
-    <string name="wish_me">party</string>
+    <string name="sender_text">Naman Surana</string>
+    <string name="wish_me">roll</string>
     <string name="textview"></string>
     <string name="todo">TODO</string>
+    <string name="myval">Run Now</string>
 </resources>
